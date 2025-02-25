@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* ESTILOS DE UCONTROL */
+/* Selecciona la imagen cuyo alt sea "Brand" */
+img[alt="Brand"]{
+  max-width: 120px !important;
+}
+
+
+/*ID en HTML*/
+#anything-llm-icon {
+  content: url("http://localhost:3000/LogoUserChat.png") !important;
+  width: 40px !important;  /* Ajusta el tamaño según necesites */
+  height: 40px !important;
+}
+
+/*CLASS en HTML*/

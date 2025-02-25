@@ -1,10 +1,13 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ChatWidget from './ChatWidget';  // <-- Importa tu componente
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* Contenido original */}
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,6 +21,9 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Aquí se monta el widget de Anything LLM */}
+      <ChatWidget />
     </div>
   );
 }
