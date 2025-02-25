@@ -6,7 +6,7 @@ const ChatWidget = () => {
     script.src = "https://anythingllm-docker-production-ade0.up.railway.app/embed/anythingllm-chat-widget.min.js";
     script.setAttribute("data-embed-id", "81ae18e4-5647-4a05-b424-a8f583d4822d");
     script.setAttribute("data-base-api-url", "https://anythingllm-docker-production-ade0.up.railway.app/api/embed");
-    script.setAttribute("data-brand-image-url", "http://localhost:3000/UcontrolLogo.png");
+    script.setAttribute("data-brand-image-url", "/UcontrolLogo.png");
     script.async = true;
 
     document.body.appendChild(script);
@@ -24,7 +24,7 @@ const ChatWidget = () => {
       // 🔹 Cambiar el icono del asistente en cada mensaje
       const assistantIcons = document.querySelectorAll('img[alt="Anything LLM Icon"]');
       assistantIcons.forEach(icon => {
-        icon.src = "http://localhost:3000/LogoUserChat.png";
+        icon.src = "/LogoUserChat.png";
         icon.style.width = "40px";
         icon.style.height = "40px";
       });
