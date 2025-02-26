@@ -46,7 +46,7 @@ img[alt="Brand"]{
 
 /*ID en HTML*/
 #anything-llm-icon {
-  content: url("http://localhost:3000/LogoUserChat.png") !important;
+  content: url("/LogoUserChat.png") !important;
   width: 40px !important;  /* Ajusta el tamaño según necesites */
   height: 40px !important;
 }
