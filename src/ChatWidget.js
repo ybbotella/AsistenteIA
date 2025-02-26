@@ -22,12 +22,24 @@ const ChatWidget = () => {
       }
 
       // 🔹 Cambiar el icono del asistente en cada mensaje
-      const assistantIcons = document.querySelectorAll('img[alt="Anything LLM Icon"]');
+      /*const assistantIcons = document.querySelectorAll('img[alt="Anything LLM Icon"]');
       assistantIcons.forEach(icon => {
         icon.src = "/LogoUserChat.png";
         icon.style.width = "40px";
         icon.style.height = "40px";
-      });
+      });*/
+
+
+        // 🔹 Cambiar el icono del asistente en cada mensaje nuevo
+    document.querySelectorAll('img[alt="Anything LLM Icon"]').forEach(icon => {
+      if (!icon.dataset.modified) { // Para evitar cambios repetidos
+        icon.src = "/LogoUserChat.png";
+        icon.style.width = "40px";
+        icon.style.height = "40px";
+        icon.dataset.modified = "true"; // Marcamos que ya ha sido cambiado
+      }
+    });
+
 
       // 🔹 Cambiar el nombre del asistente en cada mensaje recibido
       const assistantNames = document.querySelectorAll("div.allm-text-left");
