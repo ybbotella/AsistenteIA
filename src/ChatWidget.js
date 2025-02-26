@@ -11,14 +11,25 @@ const ChatWidget = () => {
 
     document.body.appendChild(script);
 
-    // 🔹 Función para forzar la actualización del icono
+    // 🔹 Función para forzar la actualización de todos los iconos
     const updateIcons = () => {
-      document.querySelectorAll('img#anything-llm-icon').forEach(icon => {
+      document.querySelectorAll('img#anything-llm-icon, img[alt="Anything LLM Icon"]').forEach(icon => {
         if (!icon.dataset.modified) { // Evita cambios repetidos
           icon.src = "/LogoUserChat.png";
           icon.style.width = "40px";
           icon.style.height = "40px";
           icon.dataset.modified = "true"; // Marcamos como modificado
+        }
+      });
+    };
+
+    // 🔹 Función para cambiar el icono en el estado de "escribiendo..."
+    const updateTypingIndicator = () => {
+      document.querySelectorAll("img").forEach(img => {
+        if (img.src.includes("anything-llm-chat-widget")) { // Detecta íconos del chat
+          img.src = "/LogoUserChat.png"; // Reemplaza el ícono mientras escribe
+          img.style.width = "40px";
+          img.style.height = "40px";
         }
       });
     };
@@ -32,9 +43,10 @@ const ChatWidget = () => {
       });
     };
 
-    // 🔹 Observador para detectar mensajes nuevos y aplicar cambios en tiempo real
+    // 🔹 Observador para detectar nuevos mensajes y cambios en la UI en tiempo real
     const observer = new MutationObserver(() => {
-      updateIcons();  // Actualiza el icono en cada nuevo mensaje
+      updateIcons();  // Actualiza el icono en cada mensaje nuevo
+      updateTypingIndicator();  // Cambia el icono mientras el bot escribe
       updateAssistantName();  // Cambia el nombre en cada mensaje nuevo
     });
 
