@@ -8,18 +8,19 @@ function App() {
       <header className="App-header">
         {/* Nuevo logo de Visionarius Agency */}
         <img src="/LogoVisionarius.png" className="App-logo" alt="Visionarius Agency Logo" />
-      </header>
+      
       <p>
           El futuro es nuestro
         </p>
         <a
           className="App-link"
-          href="https://visionariusagency.com"
+          href="https://www.visionariusagency.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Visionarius Agency
         </a>
+    </header>
       {/* Aquí se monta el widget de Anything LLM */}
       <ChatWidget />
     </div>
