@@ -46,7 +46,7 @@ img[alt="Brand"]{
 
 /*ID en HTML*/
 #anything-llm-icon {
-  content: url("/LogoUserChat.png") !important;
+  content: url("https://raw.githubusercontent.com/ybbotella/AsistenteIA/refs/heads/main/public/LogoUserChat.png") !important;
   width: 40px !important;  /* Ajusta el tamaño según necesites */
   height: 40px !important;
 }
