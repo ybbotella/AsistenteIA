@@ -39,6 +39,12 @@ const ChatWidget = () => {
         icon.dataset.modified = "true"; // Marcamos que ya ha sido cambiado
       }
     })*/
+      const icon = document.getElementById("anything-llm-icon");
+      if (icon && icon.src !== window.location.origin + "/LogoUserChat.png") { 
+        icon.src = "/LogoUserChat.png";
+        icon.style.width = "40px";
+        icon.style.height = "40px";
+      }
 
 
       // 🔹 Cambiar el nombre del asistente en cada mensaje recibido
