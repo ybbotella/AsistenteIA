@@ -11,14 +11,26 @@ const ChatWidget = () => {
 
     document.body.appendChild(script);
 
+    // 🔹 Función para cambiar el enlace de "Powered by AnythingLLM"
+    const updateSponsorLink = () => {
+      const sponsorLink = document.querySelector('a[href="https://anythingllm.com"]');
+      if (sponsorLink && !sponsorLink.dataset.modified) {
+        sponsorLink.innerHTML = "Powered by Visionarius Agency";
+        sponsorLink.href = "https://visionariusagency.com";
+        sponsorLink.style.color = "#3498db";
+        sponsorLink.style.fontWeight = "bold";
+        sponsorLink.dataset.modified = "true"; // Marca como modificado
+      }
+    };
+
     // 🔹 Función para forzar la actualización de todos los iconos
     const updateIcons = () => {
       document.querySelectorAll('img#anything-llm-icon, img[alt="Anything LLM Icon"]').forEach(icon => {
-        if (!icon.dataset.modified) { // Evita cambios repetidos
+        if (!icon.dataset.modified) {
           icon.src = "/LogoUserChat.png";
           icon.style.width = "40px";
           icon.style.height = "40px";
-          icon.dataset.modified = "true"; // Marcamos como modificado
+          icon.dataset.modified = "true";
         }
       });
     };
@@ -26,8 +38,8 @@ const ChatWidget = () => {
     // 🔹 Función para cambiar el icono en el estado de "escribiendo..."
     const updateTypingIndicator = () => {
       document.querySelectorAll("img").forEach(img => {
-        if (img.src.includes("anything-llm-chat-widget")) { // Detecta íconos del chat
-          img.src = "/LogoUserChat.png"; // Reemplaza el ícono mientras escribe
+        if (img.src.includes("anything-llm-chat-widget")) {
+          img.src = "/LogoUserChat.png";
           img.style.width = "40px";
           img.style.height = "40px";
         }
@@ -45,9 +57,10 @@ const ChatWidget = () => {
 
     // 🔹 Observador para detectar nuevos mensajes y cambios en la UI en tiempo real
     const observer = new MutationObserver(() => {
-      updateIcons();  // Actualiza el icono en cada mensaje nuevo
-      updateTypingIndicator();  // Cambia el icono mientras el bot escribe
-      updateAssistantName();  // Cambia el nombre en cada mensaje nuevo
+      updateSponsorLink(); // 🔄 Modifica el enlace del footer
+      updateIcons(); // 🔄 Cambia el icono en cada mensaje nuevo
+      updateTypingIndicator(); // 🔄 Cambia el icono mientras el bot escribe
+      updateAssistantName(); // 🔄 Cambia el nombre en cada mensaje nuevo
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
