@@ -27,7 +27,7 @@ const ChatWidget = () => {
         icon.src = "/LogoUserChat.png";
         icon.style.width = "40px";
         icon.style.height = "40px";
-      });*/
+      });
 
 
         // 🔹 Cambiar el icono del asistente en cada mensaje nuevo
@@ -38,7 +38,7 @@ const ChatWidget = () => {
         icon.style.height = "40px";
         icon.dataset.modified = "true"; // Marcamos que ya ha sido cambiado
       }
-    });
+    })*/
 
 
       // 🔹 Cambiar el nombre del asistente en cada mensaje recibido
