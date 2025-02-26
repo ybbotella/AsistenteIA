@@ -1,3 +1,7 @@
+import React from 'react';
+import './App.css';
+import ChatWidget from './ChatWidget';  // <-- Importa tu componente
+
 function App() {
   return (
     <div className="App">
