@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* Nuevo logo de Visionarius Agency */}
-        <img src="/VisionariusAgencyFondo.png" className="App-logo" alt="Visionarius Agency Logo" />
+        <img src="/LogoVisionarius.png" className="App-logo" alt="Visionarius Agency Logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
