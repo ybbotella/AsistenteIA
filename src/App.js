@@ -8,18 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* Contenido original */}
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src="https://raw.githubusercontent.com/ybbotella/AsistenteIA/refs/heads/main/public/VisionariusAgencyFondo.png" className="App-logo" alt="logo" />
+        
+      
       </header>
 
       {/* Aquí se monta el widget de Anything LLM */}
