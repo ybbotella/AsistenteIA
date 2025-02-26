@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from './visionariusAgencyFondo.png';
 import './App.css';
-import ChatWidget from './ChatWidget';  // <-- Importa tu componente
+import ChatWidget from './ChatWidget';  // <-- Importa el widget
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* Contenido original */}
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* Nuevo logo de Visionarius Agency */}
+        <img src="/VisionariusAgencyFondo.png" className="App-logo" alt="Visionarius Agency Logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
