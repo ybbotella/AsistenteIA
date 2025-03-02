@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 const ChatWidget = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = "https://anythingllm-docker-production-ade0.up.railway.app/embed/anythingllm-chat-widget.min.js";
-    script.setAttribute("data-embed-id", "81ae18e4-5647-4a05-b424-a8f583d4822d");
-    script.setAttribute("data-base-api-url", "https://anythingllm-docker-production-ade0.up.railway.app/api/embed");
+    script.src = "https://anythingllm-docker-production-3b45.up.railway.app/api/embed/anythingllm-chat-widget.min.js";
+    script.setAttribute("data-embed-id", "a86ea8d8-8a30-4838-90ba-682d0b71ccfb");
+    script.setAttribute("data-base-api-url", "https://anythingllm-docker-production-3b45.up.railway.app/api/embed");
     script.setAttribute("data-brand-image-url", "/UcontrolLogo.png");
     script.async = true;
 
@@ -75,3 +75,5 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
+
